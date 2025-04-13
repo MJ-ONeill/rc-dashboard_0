@@ -97,6 +97,15 @@ h2, h3 {
     white-space: pre-wrap;
 }
 
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
 
 /* OTHER */
 .table-container {

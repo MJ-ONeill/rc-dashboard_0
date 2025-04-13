@@ -9,7 +9,7 @@ function goHome() {
 
 if (clusterName) {
     document.title = `${clusterName} - Cluster Dashboard`;
-    document.getElementById('cluster-title').innerText = `Cluster: ${clusterName}`;
+    document.getElementById('cluster-title').innerText = `Control Center For: ${clusterName}`;
 }
 
 // Unique keys for storing cluster-specific data
@@ -115,6 +115,8 @@ function renderNotes() {
 }
 
 function addNote() {
+    const container = document.getElementById('note-grid');
+
     const wrapper = document.createElement('div');
     const textarea = document.createElement('textarea');
     const saveBtn = document.createElement('button');
@@ -125,7 +127,8 @@ function addNote() {
     wrapper.className = 'note-input-wrapper';
     wrapper.appendChild(textarea);
     wrapper.appendChild(saveBtn);
-    document.body.appendChild(wrapper);
+
+    container.prepend(wrapper); // 👈 puts the form at the top of the notes section
     textarea.focus();
 
     saveBtn.addEventListener('click', () => {
@@ -138,6 +141,7 @@ function addNote() {
         wrapper.remove();
     });
 }
+
 
 function editNote(index) {
     const updated = prompt('Edit Note (use Enter for new lines):', notes[index]);
@@ -193,6 +197,8 @@ function renderCards() {
 }
 
 function addCard() {
+    const container = document.getElementById('card-grid');
+
     const wrapper = document.createElement('div');
     const titleInput = document.createElement('input');
     const textarea = document.createElement('textarea');
@@ -206,7 +212,8 @@ function addCard() {
     wrapper.appendChild(titleInput);
     wrapper.appendChild(textarea);
     wrapper.appendChild(saveBtn);
-    document.body.appendChild(wrapper);
+
+    container.prepend(wrapper); // 👈 puts the form inside card section
     titleInput.focus();
 
     saveBtn.addEventListener('click', () => {
