@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cluster Dashboard</title>
+    <link rel="stylesheet" href="cluster.css">
+</head>
+<body>
+    <button onclick="goHome()">Return to Home</button>
+    <h1 id="cluster-title"></h1>
+
+    <hr>
+
+    <h2>Links</h2>
+    <button onclick="addLink()">Add Link</button>
+    <div id="link-list"></div>
+
+    <hr>
+
+    <h2>Notes</h2>
+    <button onclick="addNote()">Add Note</button>
+    <div id="note-grid" class="grid"></div>
+
+    <hr>
+
+    <h2>Cards</h2>
+    <button onclick="addCard()">Add Card</button>
+    <div id="card-grid" class="grid"></div>
+
+    <script src="cluster.js"></script>
+</body>
+</html>

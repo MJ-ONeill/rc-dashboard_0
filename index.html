@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Controller Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Regional Controler Dashboard</h1>
+    </header>
+    <!-- Work Schedule Table -->
+    <section id="schedule-section">
+        <h2>Work Schedule</h2>
+        <button onclick="addRow()">Add Row</button>
+        <div class="table-container">
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-menu">
+            <li>
+                Tools
+                <ul class="dropdown">
+                    <li><a href="https://zeno-monitor.spar.inhancesc.com/" target="_blank">Mobile Stops</a></li>
+                    <li><a href="https://zeno-scheduler.spar.inhancesc.com/Account/Login" target="_blank">Scheduler</a></li>
+                    <li><a href="https://spar.inhanceapps.com/integral-ui/resources/spar-user-resources" target="_blank">Integral</a></li>
+                </ul>
+            </li>
+            <li>
+                Flightboard
+                <ul class="dropdown">
+                    <li><button onclick="addFlightboardLink()">Add Flightboard Link</button></li>
+                    <div id="flightboard-links"></div>
+                </ul>
+            </li>
+            <li>
+                Quick Access
+                <ul class="dropdown">
+                    <li><a href="msteams://teams.microsoft.com/l/meetup-join/19:meeting_ODc0ZTE1MmMtZDY1Zi00ZGFhLThmMDgtNzNjODdhMDIzM2Qw@thread.v2/0?context=%7b%22Tid%22%3a%222e789bd9-a313-462a-b520-df9b586c00ed%22%2c%22Oid%22%3a%221236e339-1cc3-41e6-a438-6e81919dff9f%22%7d&anon=true&deeplinkId=568edcd0-700d-48ac-84c8-b0197adcb87e&launchAgent=join_launcher&type=meetup-join&directDl=true&msLaunch=true&enableMobilePage=true&fqdn=teams.microsoft.com" target="_blank">Daily Teams Ops Meeting</a></li>
+                    <li><a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_Zjc1OWYyMDEtZmEyNi00MTNiLWFmOTgtODFkYTBmOGJkMmUx%40thread.v2/0?context=%7b%22Tid%22%3a%228a9e14fd-49ec-40d5-ba44-a98f6d5fc982%22%2c%22Oid%22%3a%228e287756-1bf3-46af-8e6f-1197a29fae43%22%7d" target="_blank">Daily Compliance Meeting</a></li>
+                    <li><a href="https://deployment.com" target="_blank">Deployment Sheet</a></li>
+                    <li><a href="https://eos.com" target="_blank">EOS Sheet</a></li>
+                    <li><button onclick="addClockSheet()">Add Clock Sheet Link</button></li>
+                    <div id="clock-links"></div>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Cluster and Cards Section -->
+    <main>
+        <section id="clusters-section">
+            <h2>Clusters</h2>
+            <button onclick="addCluster()">Create Cluster</button>
+            <div id="clusters-container"></div>
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+    <footer style="text-align: center; padding: 15px; background-color: #f0f0f0; color: #555; font-size: 0.9em;">
+        &copy; 2025 YourAppName™. All rights reserved.
+    </footer>
+</body>
+</html>
