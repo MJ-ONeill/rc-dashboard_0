@@ -46,6 +46,16 @@ function addRow() {
 }
 renderSchedule();
 
+function removeLastRow() {
+    if (scheduleData.length > 0) {
+        scheduleData.pop();  // Remove last row
+        saveData('scheduleData', scheduleData);
+        renderSchedule();
+    }
+}
+
+
+
 // Flightboard
 let flightboardLinks = loadData('flightboardLinks', []);
 function renderFlightboardLinks() {
