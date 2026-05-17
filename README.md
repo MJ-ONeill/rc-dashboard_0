@@ -6,4 +6,3 @@ Make notes, see schedule and more It saves too your local storage so can open an
 
 Responsive can be used on mobile or PC no need to scroll to the side if want to use on smaller screens.
 
-It's user friendly - Anyone can use it  Whether you work from home,  stay at home parent's can use it, Professionals working in offices, Even Students everyone.
